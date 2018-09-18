@@ -1,0 +1,2 @@
+class BiciUsuario < ApplicationRecord
+end

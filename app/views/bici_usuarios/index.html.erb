@@ -1,0 +1,35 @@
+<div class="container">
+<h3 class="text-center">Listado de Usuarios</h3>
+
+<table class="table table-hover">
+   <tr>
+    <thead>
+    <th>Nombre</th>
+    <th>Email</th>
+    <th>Documento</th>
+	<th>Telefono</th>
+	<th>Edad</th>
+	<th>Acciones</th>
+    </thead>
+   </tr>
+   <% @usu.each do |usu| %>
+   <tr>
+      <td><%= usu.name %></td>
+      <td><%= usu.email %></td>
+      <td><%= usu.document %> </td>
+	  <td><%= usu.telephone %> </td>
+	  <td><%= usu.age %> </td>
+	  <td>
+      
+      <a class="btn btn-success" href="<%= edit_bici_usuario_path(BiciUsuario) %>"> <i class="fas fa-pencil-alt"></i> Editar</a> 
+      <%= link_to "Ver", bici_usuario_path(BiciUsuario)%>
+      </td>
+   </tr>
+   <% end %>
+</table>
+<br>
+<p> Para agregar un nuevo producto haga clic <a class="btn btn-primary" href="/bici_usuarios/new"><span class="fas fa-plus"></span> Aqui</a> </p>
+</div>
+
+
+
